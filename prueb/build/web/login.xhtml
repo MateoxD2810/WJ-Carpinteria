@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background-image: url('img/Fondo.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 400px;
+        }
+
+        .login-container img {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 150px; /* Ajusta el tamaño del logo */
+        }
+
+        h2 {
+            color: #FFC107;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-control {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-bottom: 2px solid #FFC107;
+        }
+
+        .form-control:focus {
+            border-bottom-color: #FFD700;
+            box-shadow: none;
+        }
+
+        .form-control::placeholder {
+            color: #c7c7c7;
+        }
+
+        .btn-warning {
+            background-color: #FFC107;
+            color: black;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .btn-warning:hover {
+            background-color: #FFB300;
+        }
+
+        .card {
+            background-color: #000;
+        }
+
+        .text-warning {
+            color: #FFC107 !important;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</h:head>
+
+<h:body>
+    <div class="login-container">
+        <h:form>
+            <!-- Imagen del logo -->
+            <img src="img/WJ.png" alt="Logo Carpintería" />
+
+            <!-- Título del formulario -->
+            <h2>Iniciar Sesión</h2>
+
+            <!-- Campo de nombre de usuario -->
+            <div class="mb-3">
+                <h:outputLabel for="username" value="Nombre de Usuario" class="form-label text-warning" />
+                <h:inputText id="username" value="#{loginBean.nombreUsuario}" required="true"
+                             requiredMessage="Nombre de usuario obligatorio" class="form-control"
+                             />
+                <h:message for="username" style="color:red" />
+            </div>
+
+            <!-- Campo de contraseña -->
+            <div class="mb-3">
+                <h:outputLabel for="password" value="Contraseña" class="form-label text-warning" />
+                <h:inputSecret id="password" value="#{loginBean.contrasena}" required="true"
+                               requiredMessage="Contraseña obligatoria" class="form-control"
+                               />
+                <h:message for="password" style="color:red" />
+            </div>
+
+            <!-- Selección de rol -->
+            <div class="mb-3">
+                <h:outputLabel for="rol" value="Seleccionar Rol" class="form-label text-warning" />
+                <h:selectOneMenu id="rol" value="#{loginBean.rolSeleccionado}" class="form-select"
+                                 required="true" requiredMessage="El rol es obligatorio.">
+                    <f:selectItem itemLabel="Seleccione un rol" itemValue="" />
+                    <f:selectItem itemLabel="Usuario" itemValue="Usuario" />
+                    <f:selectItem itemLabel="Carpintero" itemValue="Carpintero" />
+                    <f:selectItem itemLabel="Administrador" itemValue="Administrador" />
+                </h:selectOneMenu>
+                <h:message for="rol" style="color:red" />
+            </div>
+
+            <!-- Botón para iniciar sesión -->
+            <div class="mb-3">
+                <h:commandButton value="Iniciar Sesión" action="#{loginBean.iniciarSesion}" class="btn btn-warning" />
+            </div>
+
+            <!-- Enlace de registro -->
+            <div class="text-center">
+                <a href="registro.xhtml" class="text-warning">Registrarse</a>
+            </div>
+        </h:form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</h:body>
+</html>

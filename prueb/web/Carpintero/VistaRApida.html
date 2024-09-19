@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Modern Admin Dashboard</title>
+    <link rel="stylesheet" href="css/calendario.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--SOLO PARA GRAFICAS-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <link rel="stylesheet" href="./libs/morris.css">
+    <script src="./libs/morris.min.js" charset="utf-8"></script>
+</head>
+<body>
+   <input type="checkbox" id="menu-toggle">
+   <div class="sidebar">
+    <div class="side-header">
+       <h3><span>Carpintero</span></h3>
+    </div>
+    
+    <div class="side-content">
+        <div class="profile">
+            <div class="profile-img bg-img" style="background-image: url(img/sebastian.jpg)"></div>
+            <h4>Jhoan Sebastian Gomez Herreran</h4>
+            <small>Carpintero</small>
+        </div>
+
+        <div class="side-menu">
+           <br><br>
+            <div class="contenedor-icono">
+               <li>
+                   
+                        <a href="index.xhtml" class="bi bi-house"> <small class="active">Inicio</small></a>
+                        
+                    
+                </li>
+                <li>
+                   
+                        <a href="Ordenes.html" class="bi bi-person-lines-fill"> <small class="active">Ver Ordenes</small></a>
+                        
+                    
+                </li>
+                <li>
+                    <a href="VistaRApida.html">
+                        <span class="#"><i class="fa-solid fa-eye" style="color: #c4a600;"></i></span><small>Vista Rapida</small>
+                     </a>
+                 </li>
+                <li>
+                   
+                        <a href="chats.html" class="bi bi-chat-dots"> <small class="active">Chats</small></a>
+                        
+                    
+                </li>
+                <li>
+                   
+                        <a href="pendientes.html" class="bi bi-person-exclamation"> <small class="active">Pendientes</small></a>
+
+                    
+                </li>
+                <li>
+                   
+                        <a href="actividad.html" class="bi bi-tools"> <small class="active">Actividad</small></a>
+
+                    
+                </li>
+                <li>
+                   
+                        <a href="materiales.html" class="bi bi-pencil-square"> <small class="active">Materiales</small></a>
+                        
+                    
+                </li>
+                <li>
+                   
+                        <a href="calendario.html" class="bi bi-calendar"> <small class="active">Calendario</small></a>
+                        
+                    
+                </li>
+                <li>
+                   
+                    <a class="bi bi-stars" href="Reseñas.html"> <small class="active">Reseñas</small></a>
+                        
+                    
+                </li>
+                <li>
+                   
+                    <a class="bi bi-bar-chart" href="estadisticas.html"> <small class="active">Estadisticas</small></a>
+                        
+                    
+                </li>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    
+    <header>
+        <div class="header-content">
+
+            <label for="menu-toggle">
+                <span class="las la-bars">WJ CARPINTERIA</span>
+            </label>
+            
+            <div class="header-menu">
+                <label for="">
+                    <a href="index.html" class="bi bi-house"></a>
+                </label>
+                
+                <div class="boton-modal">
+                    <label href="#" for="btn-modal" class="bi bi-bell"></label>
+                </div>
+                <input type="checkbox" id="btn-modal">
+<div class="container-modal">
+    <div class="content-modal">
+        <h2>Lo siento</h2>
+        <p>Aun no tienes notificasiones nuevas</p>
+        <div class="btn-cerrar">
+            <label for="btn-modal">Cerrar</label>
+        </div>
+    </div>
+    <label for="btn-modal" class="cerrar-modal"></label>
+</div>
+                
+                <div class="notify-icon">
+                    <a class="bi bi-arrow-return-left" href="../../login.xhtml"></a>
+                    
+                    <span class="notify"></span>
+                </div>
+                <div class="user" >
+                    <div class="bg-img" style="background-image: url(img/sebastian.jpg)"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <br><br><br><br>
+         <!--GRAFICAS-->
+ <div class="container">
+    <h1>Grafica  de Productos mas salidos</h1>
+    <hr>
+    <div id="david"></div>
+    <hr>
+    <br>
+    <br>
+
+    <h1>Grafica  de Carpinteros</h1>
+    <hr>
+    <div id="frost"></div>
+    <hr>
+    <br>
+    <br>
+    
+    <h1>Grafica  de Ventas del Mes</h1>
+    <hr>
+    <div id="car"></div>
+    <hr>
+    <br>
+    <br>
+
+    <h1>Grafica  de Proveedores</h1>
+    <hr>
+    <div id="moto"></div>
+    <hr>
+    <br>
+    <br>
+    
+    <h1>Grafica  de Envios</h1>
+    <hr>
+    <div id="avion"></div>
+    <hr>
+    <br>
+    <br>
+    
+    <h1>Grafica  del Sistema (General)</h1>
+    <hr>
+    <div id="tren"></div>
+    <hr>
+    <br>
+    <br>
+    
+    <h1>Grafica  de Materiales</h1>
+    <hr>
+    <div id="dog"></div>
+    <hr>
+    <br>
+    <br>
+        </div>
+        <script src="./js/lineas.js" charset="utf-8"></script>
+         <!--FIN GRAFICAS-->
+        
+        
+        
+    </div>
+</body>
+</html>

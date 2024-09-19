@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <title>Carpintero Inicio</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <script src="https://kit.fontawesome.com/6adaba3b1c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h:form>
+        <input type="checkbox" id="menu-toggle"/>
+        <div class="sidebar">
+            <div class="side-header">
+                <h3><span>Carpintero</span></h3>
+            </div>
+
+            <div class="side-content">
+                <div class="profile">
+                    <div class="profile-img bg-img" style="background-image: url(img/sebastian.jpg)"></div>
+                    <h4>Jhoan Sebastian Gomez Herreran</h4>
+                    <small>Carpintero</small>
+                </div>
+
+                <div class="side-menu">
+                    <br/><br/>
+                    <div class="contenedor-icono">
+                        <ul>
+                            <li>
+                                <a href="index.xhtml" class="bi bi-house">
+                                    <small class="active">Inicio</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Ordenes.html" class="bi bi-person-lines-fill">
+                                    <small class="active">Ver Ordenes</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="VistaRApida.html">
+                                    <span class="#"><i class="fa-solid fa-eye" style="color: #c4a600;"></i></span>
+                                    <small>Vista Rapida</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chats.html" class="bi bi-chat-dots">
+                                    <small class="active">Chats</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pendientes.html" class="bi bi-person-exclamation">
+                                    <small class="active">Pendientes</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="actividad.html" class="bi bi-tools">
+                                    <small class="active">Actividad</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="materiales.html" class="bi bi-pencil-square">
+                                    <small class="active">Materiales</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="calendario.html" class="bi bi-calendar">
+                                    <small class="active">Calendario</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="bi bi-stars" href="Reseñas.html">
+                                    <small class="active">Reseñas</small>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="bi bi-bar-chart" href="estadisticas.html">
+                                    <small class="active">Estadisticas</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <header>
+                <div class="header-content">
+                    <label for="menu-toggle">
+                        <span class="las la-bars">WJ CARPINTERIA</span>
+                    </label>
+
+                    <div class="header-menu">
+                        <label for="#">
+                            <a href="index.html" class="bi bi-house"></a>
+                        </label>
+
+                        <div class="boton-modal">
+                            <label href="#" for="btn-modal" class="bi bi-bell"></label>
+                        </div>
+                        <input type="checkbox" id="btn-modal"/>
+                        <div class="container-modal">
+                            <div class="content-modal">
+                                <h2>Lo siento</h2>
+                                <p>Aun no tienes notificasiones nuevas</p>
+                                <div class="btn-cerrar">
+                                    <label for="btn-modal">Cerrar</label>
+                                </div>
+                            </div>
+                            <label for="btn-modal" class="cerrar-modal"></label>
+                        </div>
+
+                        <div class="notify-icon">
+                            <a class="bi bi-arrow-return-left" href="../../login.xhtml"></a>
+                            <span class="notify"></span>
+                        </div>
+                        <div class="user">
+                            <div class="bg-img" style="background-image: url(img/sebastian.jpg)"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="page-content">
+                    <div class="analytics">
+                        <div class="card">
+                            <a href="Clientes.html">
+                                <div class="card-head">
+                                    <h2>40</h2>
+                                    <span class="#"><i class="fa-solid fa-user-check" style="color: #000000;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Clientes satisfechos</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator one" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="#">
+                                <div class="card-head">
+                                    <h2>10</h2>
+                                    <span class="#"><i class="fa-solid fa-chart-line" style="color: #1049ad;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Productos mas Vendidos</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator two" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="Clientes.html">
+                                <div class="card-head">
+                                    <h2>12</h2>
+                                    <span class="#"><i class="fa-solid fa-bag-shopping" style="color: #e0720b;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Mejores Compradores</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator two" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="Ventas.html">
+                                <div class="card-head">
+                                    <h2>$2.500.000</h2>
+                                    <span class="#"><i class="fa-solid fa-trophy" style="color: #FFD43B;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Record en Ventas</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator three" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="Pedidos.html">
+                                <div class="card-head">
+                                    <h2>47</h2>
+                                    <span class="#"><i class="fa-solid fa-clipboard-check" style="color: #18aa29;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Pedidos recibidos</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator four" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="Pedidos.html">
+                                <div class="card-head">
+                                    <h2>2</h2>
+                                    <span class="#"><i class="fa-regular fa-clock" style="color: #000000;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Pedidos Pendientes</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator four" style="width: 10%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="Comentarios.html">
+                                <div class="card-head">
+                                    <h2>8</h2>
+                                    <span class="#"><i class="fa-regular fa-star" style="color: #FFD43B;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Resaeñas</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator four" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="card">
+                            <a href="Proveedores.html">
+                                <div class="card-head">
+                                    <h2>3</h2>
+                                    <span class="#"><i class="fa-regular fa-comments" style="color: #b51212;"></i></span>
+                                </div>
+                                <div class="card-progress">
+                                    <small>Chats</small>
+                                    <div class="card-indicator">
+                                        <div class="indicator four" style="width: 15%"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </h:form>
+</body>
+</html>

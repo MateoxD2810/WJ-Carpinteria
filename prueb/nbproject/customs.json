@@ -1,0 +1,31 @@
+{
+    "elements": {
+        "div": {},
+        "button": {},
+        "a": {
+            "attributes": {
+                "aria-current": {},
+                "aria-disabled": {},
+                "href": {},
+                "class": {}
+            }
+        },
+        "img": {
+            "attributes": {
+                "class": {}
+            }
+        },
+        "h:column": {},
+        "h3": {},
+        "h4": {},
+        "f:facet": {},
+        "h:dataTable": {},
+        "f:setPropertyActionListener": {},
+        "h:commandLink": {},
+        "h:form": {}
+    },
+    "attributes": {
+        "src": {},
+        "id": {}
+    }
+}

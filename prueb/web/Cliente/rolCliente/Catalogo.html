@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../rolCliente/css/styleCliente.css">
+    <link rel="stylesheet" href="../iconos/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="../rolCliente/css/catalogo.css">
+    <title>Catalogo</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <!-- 1 fila navegacion -->
+        <div class="row border-bottom border-body nav">
+
+            <div class="col">
+
+                <nav class="navbar navbar-expand-lg">
+
+                <img class="navbar-brand" src="../rolCliente/img/wjj.png">
+
+                <!-- Apartados -->
+                
+                <div class="collapse navbar-collapse Nabvar d-flex justify-content-start" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Inicio.xhtml">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PersonalizarM.html">Perzonalizar Mueble <i class="fa-solid fa-hammer"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Chat.html">Chat <i class="fa-solid fa-comment-dots"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"></a>
+                    </li>
+                    </ul>
+                </div>
+
+
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+                    <ul class="nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link fs-5" aria-current="page" href=""><i class="fa-solid fa-user"></i> </a>
+                        </li>
+                        <div class="botonPerfil text-center">
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="">Ver perfil</button>
+                        </div>
+
+                        <!-- Ver Perfil -->
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+            
+                                <div class="modal-body">
+                                <!-- Contenido -->
+                                <div class="imgPer card">
+                                <img src="../rolCliente/img/cliente.jpg" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body ">
+                                    <h3 class="display-6 text-warning-emphasis">Diego Gómez</h3>
+                                    <h4>Rol: Cliente</h4>
+                                    <h4>Dirección: Diagonal 10 #20-25</h4>
+                                    <h4>Municipio: Sincelejo</h4>
+                                    <h4>Correo Electrónico: diegog@example.com</h4>
+                                    <h4>Teléfono: +57 319 876 5432</h4>
+            
+                                </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-dark fs-6" data-bs-dismiss="modal">Cerrar</button>
+                                <a href="../rolCliente/Actualizar.php" type="button" class="btn btn-warning fs-6">Modificar Información</a>
+                            </div>
+            
+                            </div>
+                            </div>
+                        </div>
+
+                        <!--Ver Perfil -->
+                    <li>
+                        <a class="nav-link fs-5" href="Carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="#"><i class="fa-solid fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="../../login.xhtml"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    </li>
+                    </ul>
+                </div>
+
+                </nav>
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+
+        <main class="ficha">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../rolCliente/img/catalogo/cocina.png">
+                            <div class="card-body">
+                                <h5 class="card-title">Cocina Integral de Roble</h5>
+                                <p class="card-text">$7.000.000</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="../rolCliente/Details.html" class="btn btn-dark">Detalles</a>
+                                    </div>
+                                    <button onclick="mostrarNotificacion()" class="btn btn-warning addToCart">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../rolCliente/img/catalogo/mostrador.png">
+                            <div class="card-body">
+                                <h5 class="card-title">Mostrador con Luces LED</h5>
+                                <p class="card-text">$3.000.000</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="../rolCliente/DetailsML.html" class="btn btn-dark">Detalles</a>
+                                    </div>
+                                    <button onclick="mostrarNotificacion()" class="btn btn-warning addToCart">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../rolCliente/img/catalogo/percheros.jpeg">
+                            <div class="card-body">
+                                <h5 class="card-title">Percheros</h5>
+                                <p class="card-text">$4.000.000</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="../rolCliente/DetailsP.html" class="btn btn-dark">Detalles</a>
+                                    </div>
+                                    <button onclick="mostrarNotificacion()" class="btn btn-warning addToCart">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="../rolCliente/img/catalogo/mostrador2.jpeg">
+                            <div class="card-body">
+                                <h5 class="card-title">Mostrador estilo Canino</h5>
+                                <p class="card-text">$4.500.000</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="../rolCliente/DetailsMC.html" class="btn btn-dark">Detalles</a>
+                                    </div>
+                                    <button onclick="mostrarNotificacion()" class="btn btn-warning addToCart">Agregar al Carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+
+
+        <div id="notificacion" class="notificacion-container hidden">
+            <div class="notificacion-card">
+                <div class="notificacion-content">
+                    <h5 class="notificacion-title">¡Producto añadido al carrito!</h5>
+                    <div class="d-flex justify-content-between">
+                        <div class="btn-group">
+                            <button onclick="cerrarNotificacion()" class="btn btn-dark">Aceptar</button>
+                        </div>
+                        <div class="btn-group">
+                            <a href="../rolCliente/Carrito.html" class="btn btn-warning">Ver Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="alerta" class="alert hidden">
+            <div class="alert-content">
+                <p>Este producto ya está en tu carrito de compras.</p>
+                <button onclick="cerrarAlerta()">Aceptar</button>
+            </div>
+        </div>
+
+
+
+
+<!--FOOTER-->
+
+<footer>
+
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                <h4 class="text-uppercase mb-4 font-weight-bold text-dark">Nosotros</h4>
+                <hr class="mb-4">
+                
+                <p><a href="#" class="text-dark">Nosotros</a></p>
+                <p><a href="#" class="text-dark">Servicios</a></p>
+                <p><a href="../rolCliente/Error404.html" class="text-dark">Ayuda</a></p>
+                
+            </div>
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                <h4 class="text-uppercase mb-4 font-weight-bold text-dark">INFO SCRUM</h4>
+                <hr class="mb-4">
+
+                <p><i class="fa-regular fa-user"></i>Mateo Galindo Sandino</p>
+                <p><i class="fab fa-whatsapp"></i>+57 324 5568379</p>
+                <p><i class="fa-regular fa-user"></i>Christopher Daniel Jimenez Rivera</p>
+                <p><i class="fab fa-whatsapp"></i>+57 310 8874722</p>
+                <p><i class="fa-regular fa-user"></i>Juan Camilo Amorocho Lievano</p>
+                <p><i class="fab fa-whatsapp"></i>+57 322 4529636</p>
+                
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+
+                <h4 class="text-uppercase mb-4 font-weight-bold text-dark">INFO WJ Carpinteria</h4>
+                <hr class="mb-4">
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In assumenda accusamus fuga iste! 
+                    Iste blanditiis voluptates qui suscipit tempore maiores quam repellendus vero aut facere! 
+                    Omnis odit rerum itaque illo.</p>
+                
+                
+            </div>
+            <hr class="mb-4">
+            <div class="text-center mb-2">
+
+                <p>
+                    © 2024 WJ-Carpinteria. Todos los derechos reservados.
+                    <a href="#">
+                        <strong class="text-primary"></strong>
+                    </a>
+                </p>
+
+            </div>
+            <div class="text-center ">
+
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item ">
+                        <a href="#" class="text-dark"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item ">
+                        <a href="#" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                    <li class="list-inline-item ">
+                        <a href="#" class="text-dark"><i class="fab fa-tiktok"></i></a>
+                    </li>
+                    <li class="list-inline-item ">
+                        <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <!-- script -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../rolCliente/js/carrusel.js"></script>
+
+    <script src="../js/Catalogo.js"></script>
+    
+</body>
+</html>
